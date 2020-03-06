@@ -1,12 +1,37 @@
 import React from 'react';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+} from "react-router-dom";
 import './App.css';
+
+//components
+import Menu from './components/Menu';
+import Home from './view/Home';
+import Login from './view/Login';
+import Categoria from './view/System/Categoria';
+import Configuracion from './view/System/Configuracion';
 
 export default function App() {
 	return (
-		<div className="container">
-			<div className="jumbotron">
-				<p className=" lead text-cente">Bienbenido</p>
-			</div>
-		</div>
+		<Router>
+			<Menu />
+			<Switch>
+				<Route exact path="/">
+					<Home />
+				</Route>
+				<Route path="/login">
+					<Login />
+				</Route>
+				<Route path="/categoria">
+					<Categoria />
+				</Route>
+				<Route path="/configuracion">
+					<Configuracion />
+				</Route>
+			</Switch>
+		</Router>
 	);
 }

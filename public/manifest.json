@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "openDesktop",
+  "name": "openDesktop para crear apps para escritorio usando Rect y Electron... mas react que electron ",
   "icons": [
     {
       "src": "favicon.ico",
